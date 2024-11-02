@@ -85,7 +85,7 @@ La actividad consiste en completar y corregir el desarrollo de una calculadora e
 
 ### Manual de uso de la aplicación explicado con ejemplos
 
-[Manual de uso de la calculadora](manual_de_uso_con_ejemplos.md)
+ - [Manual de uso de la calculadora](manual_de_uso_con_ejemplos.md)
 
 ---
 
