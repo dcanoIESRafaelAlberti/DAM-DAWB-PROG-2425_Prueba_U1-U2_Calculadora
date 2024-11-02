@@ -144,14 +144,17 @@ def obtener_operaciones() -> str:
     # El desarrollo de esta función está incompleto
     """
     Operaciones disponibles:
-      + => Suma
-      - => Resta
-      x o * => Multiplicación
-      / o : => División
       ce => Reiniciar resultado a 0
       decimales <n> => Establecer decimales en resultado
+      cadena vacía + <ENTER> => Pregunta si desea salir
       calculo => Iniciar cálculo secuencial
-      <ENTER> => Pregunta si desea salir
+          + => Suma
+          - => Resta
+          x o * => Multiplicación
+          / o : => División
+          ** exp => Potencia
+          cancelar => vovler sin actualizar resultado de la calculadora
+          cadena vacía + <ENTER> => volver actualizando resultado de la calculadora
     """
 
 
