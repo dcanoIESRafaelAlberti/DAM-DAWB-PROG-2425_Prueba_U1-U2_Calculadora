@@ -111,7 +111,10 @@ def dividir():
 
 def potencia():
     # El desarrollo de esta sin realizar y tampoco la documentación.
-
+    # PREMISAS a tener en cuenta:
+    # - Cualquier número elevado a 0 da como resultado 1.
+    # - Para simplificar esta práctica vamos a suponer que un número elevado a un 
+    #   exponente negativo siempre dará 0 (aunque en realidad no es así matemáticamente)
 
 
 def pedir_entrada(msj: str) -> str:
@@ -278,4 +281,3 @@ def main():
         else:
             mostrar_error
             pausa()
-
