@@ -43,6 +43,44 @@ La actividad consiste en completar y corregir el desarrollo de una calculadora e
 4. **Pruebas Unitarias**:
    - Ejecutar pruebas unitarias para verificar el correcto funcionamiento de las funciones **realizar_calculo()**, **multiplicar()**, **dividir()**, **potencia()**, y **es_resultado_negativo()**.
 
+5. **BONUS extra**:
+   - De manera opcional, si termináis todo, podéis modificar el programa para que se muestre un menú, en vez de usar comandos en línea. Por ejemplo:
+
+     ```
+     Menú
+     1. Realizar un cálculo secuencial.
+     2. Mostrar lista de operaciones.
+     3. Reiniciar resultado (CE).
+     4. Configurar número de decimales.
+     5. Salir.
+     ```
+
+     La opción 1, entraría en el cálculo secuencial directamente:
+
+     ```
+     ## Ingrese número, operador, 'resultado', 'cancelar' o <ENTER> para finalizar el cálculo ##
+   
+            (Cálculo = 0) >>
+     ```
+
+     La opción 2 mostraría las operaciones disponibles durante el cálculo secuencial (ya que los otros comandos ya están en el menú):
+
+     ```
+     Operaciones disponibles:
+         + => Suma
+         - => Resta
+         x o * => Multiplicación
+         / o : => División
+         ** exp => Potencia
+         cancelar => vovler sin actualizar el resultado de la calculadora
+         cadena vacía + <ENTER> => volver al menú actualizando el resultado de la calculadora
+     ```
+
+     La opción 3 reinicia a 0 el resultado de la calculadora.
+
+     La opción 4 configura el número de decimales con el que se muestra el RESULTADO almacenado de la calculadora y los cálculos intermedios.
+
+     La opción 5 sale de la aplicación.
 ---
 
 ### Recursos
