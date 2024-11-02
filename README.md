@@ -83,6 +83,12 @@ La actividad consiste en completar y corregir el desarrollo de una calculadora e
      La opción 5 sale de la aplicación.
 ---
 
+### Manual de uso de la aplicación explicado con ejemplos
+
+[Manual de uso de la calculadora](manual_de_uso_con_ejemplos.md)
+
+---
+
 ### Recursos
 
 - [U1: Introducción a la programación en Python](https://revilofe.github.io/section1/u01/).
