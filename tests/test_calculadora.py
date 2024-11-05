@@ -4,14 +4,10 @@ import pytest
 from src.calculadora_alumnos import es_resultado_negativo, multiplicar, dividir, potencia
 
 
-def test_es_resultado_negativo():
-    # Casos donde el resultado debe ser negativo
-    assert es_resultado_negativo(-5, 3) is True
-    assert es_resultado_negativo(4, -7) is True
-    
-    # Casos donde el resultado debe ser positivo
-    assert es_resultado_negativo(5, 3) is False
-    assert es_resultado_negativo(-2, -8) is False
+# TODO: Crear el test unitario para la función es_resultado_negativo. Verifica lo siguiente:
+# Casos donde el resultado debe ser negativo (2 casos)
+# Casos donde el resultado debe ser positivo (2 casos)
+
 
 
 def test_multiplicar():
@@ -29,7 +25,6 @@ def test_multiplicar():
     # Multiplicación con cero
     assert multiplicar(0, 5) == 0
     assert multiplicar(3, 0) == 0
-
 
 def test_dividir():
     # División con números positivos
@@ -49,7 +44,6 @@ def test_dividir():
     # División por cero
     with pytest.raises(ZeroDivisionError):
         dividir(5, 0)
-
 
 @pytest.mark.parametrize(
     "base, exponente, expected",
