@@ -8,7 +8,9 @@
 
 ### Descripción:
 
-La actividad consiste en completar y corregir el desarrollo de una calculadora en Python aplicando los conceptos estudiados en las Unidades 1 y 2. La calculadora permitirá realizar operaciones aritméticas básicas y deberá cumplir con el principio de "Separación de Responsabilidades". Los estudiantes deberán leer y analizar el código provisto, corregir errores y desarrollar las partes incompletas, asegurando la gestión de excepciones.
+La actividad consiste en completar y corregir el desarrollo de una calculadora "algo especial" en Python, aplicando los conceptos estudiados en las Unidades 1 y 2. El código que debéis analizar y modificar está en "src/calculadora_alumnos.py". También existe una copia que no debéis modificar, "src/calculadora_alumnos_original.py", es un backup del programa, por si realizáis muchos cambios y necesitáis consultar el problema que se os propuso originalmente.
+
+La calculadora permitirá realizar operaciones aritméticas básicas y deberá cumplir con el principio de "Separación de Responsabilidades" (SRP). Debéis leer y analizar el código provisto, corregir errores y desarrollar las partes incompletas, asegurando la gestión de excepciones.
 
 ### Objetivo:
 
@@ -31,39 +33,41 @@ La actividad consiste en completar y corregir el desarrollo de una calculadora e
    - **calcular_operacion()**: Llama a las funciones específicas para realizar las operaciones aritméticas.
    - **realizar_calculo()**: Permite realizar operaciones en secuencia, capturando números y operadores del usuario.
    - **sumar()** y **restar()**: Desarrollo completo con documentación para funciones que reciben dos números `float` y devuelven el resultado de la suma o resta de estos.
+   - **test para la función es_resultado_negativo()**: Crear las pruebas unitarias para comprobar el buen funcionamiento de la función `es_resultado_negativo()`.
 
 2. **Organización del Código y Documentación**:
    - Todos los programas deben tener la función `main()` para organizar el flujo del programa.
    - Utilizar `DocStrings` para documentar cada función. Puedes usar el formato que prefieras (Google, reStructuredText, NumPy, o Epytext).
 
 3. **Organización del Repositorio en GitHub**:
-   - Colocar todos los archivos de código en la carpeta `src`.
-   - Colocar las pruebas unitarias en la carpeta `tests`, nombrando cada prueba de acuerdo con el ejercicio correspondiente (por ejemplo, `test_calculadora.py`).
+   - Los archivos de código se encuentran ubicados en la carpeta `src`.
+   - Las pruebas unitarias están en la carpeta `tests`.
 
 4. **Pruebas Unitarias**:
    - Ejecutar pruebas unitarias para verificar el correcto funcionamiento de las funciones **realizar_calculo()**, **multiplicar()**, **dividir()**, **potencia()**, y **es_resultado_negativo()**.
 
-5. **BONUS extra**:
+5. **BONUS extra** *(opcional)*:
+   - *IMPORTANTE*: Este cambio debéis realizarlo en un archivo nuevo que debéis llamar `calculadora_alumnos_bonus.py`.
    - De manera opcional, si termináis todo, podéis modificar el programa para que se muestre un menú, en vez de usar comandos en línea. Por ejemplo:
 
      ```
      Menú
      1. Realizar un cálculo secuencial.
-     2. Mostrar lista de operaciones.
+     2. Lista de operaciones disponibles para el cálculo.
      3. Reiniciar resultado (CE).
      4. Configurar número de decimales.
      5. Salir.
      ```
 
-     La opción 1, entraría en el cálculo secuencial directamente:
+     La opción 1, entraría en el cálculo secuencial directamente (lo que antes hacíamos mediante el comando `calculo`):
 
      ```
      ## Ingrese número, operador, 'resultado', 'cancelar' o <ENTER> para finalizar el cálculo ##
    
-            (Cálculo = 0) >>
+            (Cálculo = 0.00) >>
      ```
 
-     La opción 2 mostraría las operaciones disponibles durante el cálculo secuencial (ya que los otros comandos ya están en el menú):
+     La opción 2 mostraría las operaciones disponibles (lo que antes ejecutaba el comando `lista`). Pero solo deberá mostrar las operaciones y comandos disponibles dentro del cálculo secuencial (ya que los comandos `calculo`, `ce`, `decimales <N>` y `cadena vacía + <ENTER>` ya estarían integrados en el menú al realizar la modificación que os solicitamos en el BONUS y su lógica anterior debe ser eliminada):
 
      ```
      Operaciones disponibles:
@@ -76,11 +80,11 @@ La actividad consiste en completar y corregir el desarrollo de una calculadora e
          cadena vacía + <ENTER> => volver al menú actualizando el resultado de la calculadora
      ```
 
-     La opción 3 reinicia a 0 el resultado de la calculadora.
+     La opción 3 reinicia a 0 el resultado de la calculadora *(lo que hacía anteriormente el comando `ce`)*.
 
-     La opción 4 configura el número de decimales con el que se muestra el RESULTADO almacenado de la calculadora y los cálculos intermedios.
+     La opción 4 configura el número de decimales con el que se muestra el RESULTADO almacenado de la calculadora y los cálculos intermedios *(lo que hacía anteriormente el comando `decimales <N>`)*.
 
-     La opción 5 sale de la aplicación.
+     La opción 5 sale de la aplicación *(lo que hacíamos previamente con `cadena vacía + <ENTER>`)*.
 ---
 
 ### Manual de uso de la aplicación explicado con ejemplos
@@ -98,7 +102,7 @@ La actividad consiste en completar y corregir el desarrollo de una calculadora e
 
 ### Evaluación y calificación
 
-**Conlleva presentación**: NO
+**Conlleva presentación**: SI
 
 ---
 
@@ -106,21 +110,26 @@ La actividad consiste en completar y corregir el desarrollo de una calculadora e
 
 | **Función**             | **Dificultad (1-5)** | **Descripción de la Dificultad**                                                                          | **0** | **1** | **2** | **3** | **4** | **5** | **Criterios de Evaluación Aplicables**                         |
 |-------------------------|----------------------|----------------------------------------------------------------------------------------------------------|-------|-------|-------|-------|-------|-------|----------------------------------------------------------------|
-| `limpiar_pantalla`      | 1                    | Desarrollo parcial. Control básico de errores en la función de limpieza.                                 |       |       |       |       |       |       | RA1.a, RA1.e, RA3.a                                           |
-| `pausa`                 | 1                    | Desarrollo completo. Implementación de pausa mediante `input()` para detener la ejecución.               |       |       |       |       |       |       | RA1.a, RA3.a                                                 |
-| `mostrar_error`         | 2                    | Implementación de gestión de excepciones y mensajes de error usando `IndexError`                         |       |       |       |       |       |       | RA1.f, RA1.g, RA3.a                                           |
-| `es_resultado_negativo` | 2                    | Verifica si el resultado de una operación debe ser negativo                                              |       |       |       |       |       |       | RA1.a, RA3.d, RA3.h                                           |
-| `sumar`                 | 2                    | Desarrollo completo, incluida la documentación; recibe dos números `float` y retorna la suma de ambos.   |       |       |       |       |       |       | RA1.a, RA3.g, RA3.h                                           |
-| `restar`                | 2                    | Desarrollo completo, incluida la documentación; recibe dos números `float` y retorna la resta de ambos.  |       |       |       |       |       |       | RA1.a, RA3.g, RA3.h                                           |
-| `multiplicar`           | 4                    | Realiza multiplicación usando sumas sucesivas y ajusta el signo para el resultado                        |       |       |       |       |       |       | RA1.e, RA3.a, RA3.d                                           |
-| `dividir`               | 5                    | Realiza división usando restas sucesivas, maneja excepciones para división entre cero                    |       |       |       |       |       |       | RA1.e, RA1.f, RA3.a, RA3.d                                    |
-| `potencia`              | 5                    | Calcula potencias usando multiplicaciones y ajusta el signo para el resultado                            |       |       |       |       |       |       | RA1.e, RA1.g, RA3.a, RA3.d, RA3.h                             |
-| `calcular_operacion`    | 3                    | Realiza operaciones llamando a funciones específicas según el operador                                   |       |       |       |       |       |       | RA1.a, RA1.g, RA3.b                                           |
-| `realizar_calculo`      | 5                    | Realiza cálculo secuencial, guiando al usuario y validando las entradas y operadores                     |       |       |       |       |       |       | RA1.d, RA1.e, RA1.f, RA1.g, RA3.a, RA3.b, RA3.e               |
-| `main`                  | 4                    | Organiza el flujo principal del programa, invocando funciones y gestionando el menú de opciones          |       |       |       |       |       |       | RA1.a, RA1.g, RA3.b, RA3.e                                    |
-| **Uso único de `return` en funciones** | 3                    | Controla que cada función tenga un único `return` para simplificar el flujo y la legibilidad.             |       |       |       |       |       |       | RA1.a, RA3.g                                                  |
-| **Uso adecuado de constantes**       | 1                    | Controla el uso de constantes predefinidas (`MENSAJES_ERROR`, `OPERADORES`) en toda la aplicación.       |       |       |       |       |       |       | RA1.a
-
+| `limpiar_pantalla`      | 1                    | Desarrollo parcial. Corregir implementación y gestionar las excepciones.                                 |       |       |       |       |       |       |                                                                |
+| `pausa`                 | 1                    | Desarrollo completo para pausar el programa con el mensaje `Presione ENTER para continuar...`            |       |       |       |       |       |       |                                                                |
+| `mostrar_error`         | 3                    | Corregir errores y completar el código gestionando las excepciones `IndexError` y `Exception`.           |       |       |       |       |       |       | RA3.d, RA3.h                                                   |
+| `sumar`                 | 2                    | Desarrollo completo, incluida la documentación; recibe dos números `float` y retorna la suma de ambos.   |       |       |       |       |       |       | RA3.g                                                          |
+| `restar`                | 2                    | Desarrollo completo, incluida la documentación; recibe dos números `float` y retorna la resta de ambos.  |       |       |       |       |       |       | RA3.g                                                          |
+| `es_resultado_negativo` | 1                    | Desarrollo completo. Verifica si el resultado de una operación debe ser negativo.                        |       |       |       |       |       |       | RA3.g                                                          |
+| `multiplicar`           | 5                    | Desarrollo completo. Realiza multiplicación usando sumas sucesivas y ajusta el signo para el resultado.  |       |       |       |       |       |       | RA1.d, RA1.e, RA1.g, RA1.i, RA3.a, RA3.b, RA3.e               |
+| `dividir`               | 5                    | Desarrollo completo. Realiza división usando restas sucesivas, maneja excepción división entre cero.     |       |       |       |       |       |       | RA1.d, RA1.e, RA1.g, RA1.i, RA3.a, RA3.b, RA3.e, RA3.h        |
+| `potencia`              | 5                    | Desarrollo completo y documentación. Calcula potencias usando multiplicaciones.                          |       |       |       |       |       |       | RA1.d, RA1.e, RA1.g, RA1.i, RA3.a, RA3.b, RA3.e, RA3.g        |
+| `pedir_entrada`         | 1                    | Desarrollo parcial para eliminar espacios por delante y por detrás y conversión a minúsculas.            |       |       |       |       |       |       |                                                                |
+| `calcular_operacion`    | 3                    | Desarrollo parcial. Realiza operaciones llamando a funciones específicas según el operador.              |       |       |       |       |       |       | RA1.g, RA3.a                                                   |
+| `obtener_operaciones`   | 1                    | Desarrollo parcial. Devuelve una cadena con la lista de operaciones disponibles en la calculadora.       |       |       |       |       |       |       |                                                                |
+| `realizar_calculo`      | 5                    | Corregir errores y desarrollo parcial. Realiza el cálculo secuencial.                                    |       |       |       |       |       |       | RA1.d, RA1.e, RA1.g, RA3.a, RA3.b, RA3.d, RA3.e               |
+| `main`                  | 5                    | Corrige los errores y desarrollo parcial. Organiza el flujo principal del programa.                      |       |       |       |       |       |       | RA1.d, RA1.e, RA1.g, RA3.a, RA3.b, RA3.d, RA3.e               |
+| Uso de `mostrar_error`  | 2                    | Corrige los errores y desarrollo parcial. Organiza el flujo principal del programa.                      |       |       |       |       |       |       |                                                                |
+| Uso de `return` único   | 3                    | Controla que cada función tenga un único `return` para simplificar el flujo y la legibilidad.            |       |       |       |       |       |       | RA3.c                                                          |
+| Uso de `constantes`     | 1                    | Usar adecuadamente las constantes dentro del código.                                                     |       |       |       |       |       |       | RA1.f                                                          |
+| Cálculo de `decimales`  | 2                    | Implementar la lógica de actualización de las posiciones decimales del resultado y el cálculo intermedio.|       |       |       |       |       |       | RA1.a, RA3.g                                                   |
+| `Pruebas unitarias`     | 5                    | Comprobación del cumplimiento correcto de las pruebas unitarias.                                         |       |       |       |       |       |       | RA3.i                                                          |
+| Creación de un `test`   | 2                    | Controla el uso de constantes predefinidas (`MENSAJES_ERROR`, `OPERADORES`) en toda la aplicación.       |       |       |       |       |       |       | RA3.i                                                          |
 
 ---
 
