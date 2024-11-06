@@ -85,8 +85,8 @@ Operación (RES => 1.00) >> calculo
 ```
 
 5.1. **Realizar operaciones secuenciales**: 
-   - La calculadora permite realizar cálculos secuenciales con los operadores disponibles, como `+`, `-`, `x`, `/`, `**` o `exp`.
-   - En el ejemplo anterior, se ingresan 5 y se suma 3, luego se multiplica el cálculo realizado por el valor almacenado en la calculadora (con `resultado`... observad que es 1... Operación (RES => 1.00)), y finalmente se eleva al cuadrado con `** 2`.
+   - La calculadora permite realizar cálculos secuenciales con los operadores disponibles, como `+`, `-`, `x`, `*`, `/`, `:`, `**` o `exp`.
+   - En el ejemplo anterior, se ingresan 5 y se suma 3, luego se multiplica el cálculo realizado por el valor almacenado en la calculadora (con `resultado`... observad que es 1... *Operación (RES => 1.00)*), y finalmente se eleva al cuadrado con `** 2`.
 
 5.2. **Opciones para terminar o cancelar la secuencia**:
    - **Cancelar**: Para salir sin actualizar el resultado final, escribe `cancelar` y presiona <ENTER>.
@@ -146,14 +146,14 @@ Operación (RES => 64.00) >>
 ```
 
 ### **6. Salir de la calculadora**
-Para cerrar la aplicación, ingresa una entrada vacía y presiona <ENTER>. La calculadora preguntará si deseas salir:
+Para cerrar la aplicación, ingresa una entrada vacía y presiona `ENTER`. La calculadora preguntará si deseas salir:
 
 ```
 Operación (RES => 64.00) >> 
 ¿Desea salir de la calculadora? (s/n) s
 ```
 
-Después de contestar 's' y pulsar ENTER, se debe limpiar la consola y mostrar un mensaje de despedida, finalizando la aplicación:
+Después de contestar 's' y pulsar `ENTER`, se debe limpiar la consola y mostrar un mensaje de despedida, finalizando la aplicación:
 
 ```
 
@@ -161,4 +161,17 @@ Después de contestar 's' y pulsar ENTER, se debe limpiar la consola y mostrar u
 Bye, bye...
 
 
+```
+
+Si contesta cualquier otra cosa, limpia la pregunta y vuelve al prompt a la espera de un comando:
+
+```
+Operación (RES => 64.00) >> 
+¿Desea salir de la calculadora? (s/n) noooo
+```
+
+Después de contestar 'noooo' y pulsar `ENTER` vuelve al prompt:
+
+```
+Operación (RES => 64.00) >> 
 ```
