@@ -46,7 +46,40 @@ La calculadora permitirá realizar operaciones aritméticas básicas y deberá c
 4. **Pruebas Unitarias**:
    - Ejecutar pruebas unitarias para verificar el correcto funcionamiento de las funciones **realizar_calculo()**, **multiplicar()**, **dividir()**, **potencia()**, y **es_resultado_negativo()**.
 
-5. **BONUS extra** *(opcional)*:
+5. **IMPORTANTE: Aclaraciones sobre las operaciones de Multiplicar, Dividir y Potencia**:
+
+   - ***No será posible la utilización de los operadores de Python para multiplicar, dividir o realizar la exponenciación de un número***. Deben ser cálculos realizados con **sumas y restas EXCLUSIVAMENTE**.
+
+   - Habrá que ***tener en cuenta el signo*** de los números con los que se realiza el cálculo para proporcionar un resultado final correcto.
+
+   - Las funciones recibirán argumentos de tipo float, pero ***trabajarán internamente con los números convertidos a enteros***, previamente realizando un **redondeo**:
+   
+       * Si recibe un número de 6.78, pasará a ser 7 para realizar los cálculos.
+       * Si recibe un número de 1.48, pasará a ser 1 para realizar los cálculos.
+
+   - Tras lo comentado anteriormente, remarcar que las 3 funciones ***reciben argumentos tipo `float`***, trabajan internamente solo con tipos `int` y ***retornan un número tipo `int`***.
+
+   - Para la potencia, como premisa de funcionamiento para simplificar la programación, aunque lejos de la realidad matemática, ***si recibe un exponente negativo, el resultado será 0***.
+
+   - También cabe destacar que ***cualquier número elevado a 0 dará como resultado 1***.
+
+   - Ejemplo de cálculo de multiplicaciones:
+       
+       * 17.88 x 3.44 => 18 x 3 => 18 + 18 + 18 = **54**
+       * 4.77 x -125.09 => 5 x -125 => - (125 + 125 + 125 + 125 + 125) = **-625** (cuidado con el signo que previamente debéis gestionarlo)
+   - Para realizar las divisiones, debemos ir restando el dividendo por el divisor, mientras el resultado sea mayor que el dividendo:
+   
+       * 25.77 : 6.02 => 26 : 6 => 26 - 6 = 20; 20 - 6 = 14; 14 - 6 = 8; 8 - 6 = 2 => el resultado de la división es **4**.
+       * 25.77 : -6.02 => 26 : 6 => 26 - 6 = 20; 20 - 6 = 14; 14 - 6 = 8; 8 - 6 = 2 => el resultado de la división es **-4** (cuidado con el signo que previamente debéis gestionarlo).
+
+   - Para realizar las potencias será OBLIGATORIO el uso de la función multiplicar(), que previamente habréis desarrollado.
+       
+       * 2.33 ** 3.9996 => 2 ** 4 => 2 * 2 * 2 * 2 = **16**.
+       * -2.33 ** 3.9996 => 2 ** 4 => 2 * 2 * 2 * 2 = **-16** (cuidado con el signo que previamente debéis gestionarlo).
+       * -2.33 ** 0 => **1**.
+       * -2.33 ** -6 => **0**.
+
+7. **BONUS extra** *(opcional)*:
    - *IMPORTANTE*: Este cambio debéis realizarlo en un archivo nuevo que debéis llamar `calculadora_alumnos_bonus.py`.
    - De manera opcional, si termináis todo, podéis modificar el programa para que se muestre un menú, en vez de usar comandos en línea. Por ejemplo:
 
