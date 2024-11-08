@@ -8,7 +8,7 @@
 
 ### Descripción:
 
-La actividad consiste en completar y corregir el desarrollo de una calculadora "algo especial" en Python, aplicando los conceptos estudiados en las Unidades 1 y 2. El código que debéis analizar y modificar está en "src/calculadora_alumnos.py". También existe una copia que no debéis modificar, "src/calculadora_alumnos_original.py", es un backup del programa, por si realizáis muchos cambios y necesitáis consultar el problema que se os propuso originalmente.
+La actividad consiste en completar y corregir el desarrollo de una calculadora "algo especial" en Python, aplicando los conceptos estudiados en las Unidades 1 y 2. El código que debéis analizar y modificar está en "src/calculadora_alumnos.py". También existe una segunda rama, main_original, que no debéis modificar, es un backup del programa, por si realizáis muchos cambios y necesitáis consultar el problema que se os propuso originalmente.
 
 La calculadora permitirá realizar operaciones aritméticas básicas y deberá cumplir con el principio de "Separación de Responsabilidades" (SRP). Debéis leer y analizar el código provisto, corregir errores y desarrollar las partes incompletas, asegurando la gestión de excepciones.
 
